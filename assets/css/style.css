@@ -1248,6 +1248,50 @@ table.dataTable thead > tr > td.sorting {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out
 }
+
+/* Custom Radio */
+.radio-inline{
+	display: flex;
+	align-items:start;
+}
+.radio-inline-content{
+	display: flex;
+	flex-direction: column;
+}
+.radio-span{
+	color: rgba(0, 0, 0, 0.5);
+}
+.tab-label{
+	margin-top: 10px;
+}
+.sharing-span{
+	margin: 10px 0;
+}
+.flex{
+	display:flex;
+}
+.members-list{
+	margin-top: 20px;
+}
+.member-div{
+	margin: 10px;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+.right svg{
+	width: 40px;
+	height: 100%;
+	margin-right: 10px;
+}
+.name-email{
+	flex-direction: column;
+}
+.left{
+	cursor: pointer;
+}
+
+
 .setting-performance-table.table>tbody>tr>td, .setting-performance-table.table>tbody>tr>th, .setting-performance-table.table>tfoot>tr>td, .setting-performance-table.table>tfoot>tr>th, .setting-performance-table.table>thead>tr>td, .setting-performance-table.table>thead>tr>th {
     vertical-align: middle;
 }
