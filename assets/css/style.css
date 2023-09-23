@@ -1291,6 +1291,73 @@ table.dataTable thead > tr > td.sorting {
 	cursor: pointer;
 }
 
+.security{
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.switch input {
+	position: absolute;
+	opacity: 0;
+}
+
+.switch {
+display: inline-block;
+font-size: 20px; /* 1 */
+height: 1em;
+width: 2em;
+background: #BDB9A6;
+border-radius: 1em;
+}
+
+.switch div {
+height: 1em;
+width: 1em;
+border-radius: 1em;
+background: #FFF;
+box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+		transition: all 300ms;
+}
+
+.switch input:checked + div {
+-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+}
+
+.margin-10{
+	margin: 10px 0;
+}
+
+.tab-pane form svg{
+	width: 40px;
+	height: 100%;
+}
+
+.col-connections{
+	border: 1px solid #2c2c2aa4;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 10px;
+}
+.col-connections svg{
+	height: 40px !important;
+	margin-bottom: 10px;
+}
+.btn-link{
+	color: rgba(26, 71, 142, 0.872);
+	padding-left: 0;
+}
+
+.workflow{
+	display: flex;
+	justify-content: space-between;
+}
+.workflow .default{
+	display: none;
+}
 
 .setting-performance-table.table>tbody>tr>td, .setting-performance-table.table>tbody>tr>th, .setting-performance-table.table>tfoot>tr>td, .setting-performance-table.table>tfoot>tr>th, .setting-performance-table.table>thead>tr>td, .setting-performance-table.table>thead>tr>th {
     vertical-align: middle;
