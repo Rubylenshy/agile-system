@@ -403,6 +403,7 @@
                             <!-- /Page Header -->
 
                             <!-- Nav tabs -->
+
                             <ul class="nav nav-tabs nav-tabs-bottom" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
@@ -422,67 +423,88 @@
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <h4>Expense Approval Settings</h4>
-                                    <div class="form-group form-row">
-                                        <label class="control-label col-md-12">Default Expense Approval</label>
-                                        <div class="col-md-12 approval-option">
-                                            <label class="radio-inline">
-                                            <input id="radio-single1" class="mr-2 default_expense_approval" value="seq-approver" checked="" name="default_expense_approval" type="radio">Sequence Approval (Chain) <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
-                                            </label>
-                                            <label class="radio-inline ml-2">
-                                            <input id="radio-multiple3" class="mr-2 default_expense_approval" value="sim-approver" name="default_expense_approval" type="radio">Simultaneous Approval <sup><span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group  form-row row approver seq-approver" style="display: block;">
-                                        <label class="control-label col-sm-3">Expense Approvers</label>
-                                        <div class="col-sm-9 ">
-                                            <label class="ex_exp_approvers_1 control-label mb-2 exp_appr" style="padding-left:0">Approver 1</label>
-                                            <div class="row ex_exp_approvers_1 form-group">
-                                                <div class="col-md-6">
-                                                    <select class="select form-control expense_approvers" style="width:260px" name="expense_approvers[]" tabindex="-1" aria-hidden="true">
-                                                        <option value="">Select Approvers</option>
-                                                        <option value="1">CEO</option>
-                                                        <option value="9">Direct Manager</option>
-                                                        <option value="11">Development Manager 
-                                                        </option>
-                                                        <option value="6">Finance</option>
-                                                    </select>
-                                                </div>
+                                <!-- Tab Pane 1-->
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="workspace-name">
+                                                <label for="workspaceInput">Workspace Name</label>
+                                                <input class="form-control" id="workspaceInput" type="text" placeholder="Agile Team Dashboard">
                                             </div>
-                                            <label class="ex_exp_approvers_2 control-label mb-2 exp_appr" style="padding-left:0">Approver 2</label>
-                                            <div class="row ex_exp_approvers_2 form-group">
-                                                <div class="col-md-6">
-                                                    <select class="select form-control expense_approvers " style="width:260px" name="expense_approvers[]" tabindex="-1" aria-hidden="true">
-                                                        <option value="">Select Approvers</option>
-                                                        <option value="1">CEO</option>
-                                                        <option value="9">Direct Manager</option>
-                                                        <option value="11">Development Manager 
-                                                        </option>
-                                                        <option value="6">Finance</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-2"><a class="remove_ex_exp_approver btn rounded border text-danger" data-id="2"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                                            <div class="space-description">
+                                                <label class="tab-label" for="descriptionInput">Description</label>
+                                                <input class="form-control" id="descriptionInput" type="text" placeholder="Add description">
                                             </div>
-                                            <label class="ex_exp_approvers_3 control-label m-b-10 exp_appr" style="padding-left:0">Approver 3</label>
-                                            <div class="row ex_exp_approvers_3 form-group">
-                                                <div class="col-md-6">
-                                                    <select class="select form-control expense_approvers" style="width:260px" name="expense_approvers[]" tabindex="-1" aria-hidden="true">
-                                                        <option value="">Select Approvers</option>
-                                                        <option value="1">CEO</option>
-                                                        <option value="9">Direct Manager</option>
-                                                        <option value="11">Development Manager 
-                                                        </option>
-                                                        <option value="6">Finance</option>
-                                                    </select>
+                                            <div class="form-group form-row">
+                                                <label class="control-label col-md-12 tab-label">Type</label>
+                                                <div class="col-md-12 approval-option">
+                                                    <label class="radio-inline">
+                                                        <input id="radio-single1" class="mr-2 default_expense_approval" value="seq-approver" checked="" name="default_expense_approval" type="radio">
+                                                        <div class="radio-inline-content">
+                                                            <div>Private <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup></div> 
+                                                            <span class="radio-span">Only Members can see this workspace</span>
+                                                        </div>
+                                                    </label>
+                                                    <label class="radio-inline ">
+                                                        <input id="radio-multiple3" class="mr-2 default_expense_approval" value="sim-approver" name="default_expense_approval" type="radio">
+                                                        <div class="radio-inline-content">
+                                                            <div>Public <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup></div> 
+                                                            <span class="radio-span">Anyone on the system can view and ask to join the workspace</span>
+                                                        </div>
+                                                        
+                                                    </label>
                                                 </div>
-                                                <div class="col-md-2"><a class="remove_ex_exp_approver btn rounded border text-danger" data-id="3"><i class="fa fa-times" aria-hidden="true"></i></a></div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-9 col-md-offset-3 m-t-10">
-                                                <a id="add_expense_approvers" href="javascript:void(0)" class="add-more">+ Add Approver</a>
+                                        <div class="col">
+                                            <div class="form-group  form-row row approver seq-approver" style="display: block;">
+                                                <label class="control-label ">Manage members and sharing</label>
+                                                <div class="sharing-span radio-span">To share this space, add people as members. All members will see this space on their left sidebar.</div>
+                                                <input class="form-control" id="workspaceInput" type="text" placeholder="Add members by name or email">
+                                                <div class=" members-list">
+                                                    <div class="member-div flex">
+                                                        <div class="right flex">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                                                            </svg>
+                                                            <div class="name-email flex">
+                                                                <span class="member-name">Admin</span><span class="member-email">admin@agiledash.com</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="left flex">
+                                                            <select class="custom-select custom-select-sm">
+                                                                <option value="1">Full</option>
+                                                                <option value="2">Admin</option>
+                                                                <option value="3">Member</option>
+                                                            </select>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill=#000" class="bi bi-x" viewBox="0 0 16 16">
+                                                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="member-div flex">
+                                                        <div class="right flex">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                              </svg>
+                                                            <div class="name-email flex">
+                                                                <span class="member-name">User 1</span><span class="member-email">agiledeveloper@example.com</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="left flex">
+                                                            <select class="custom-select custom-select-sm">
+                                                                <option value="1">Member</option>
+                                                                <option value="2">Full</option>
+                                                                <option value="3">Admin</option>
+                                                            </select>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill=#000" class="bi bi-x" viewBox="0 0 16 16">
+                                                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="m-t-30">
@@ -490,66 +512,25 @@
                                                 <button id="expense_approval_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
-                                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-12">Default Leave Approval</label>
-                                        <div class="col-md-12 approval-option">
-                                            <label class="radio-inline">
-                                            <input id="radio-single" class="mr-2 default_offer_approval" value="seq-approver" name="default_leave_approval" type="radio">Sequence Approval (Chain) <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
-                                            </label>
-                                            <label class="radio-inline ml-2">
-                                            <input id="radio-multiple1" class="mr-2 default_offer_approval" value="sim-approver" checked="" name="default_leave_approval" type="radio">Simultaneous Approval <sup><span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-row">
-                                        <label class="control-label col-sm-12">leave Approvers</label>
-                                        <div class="col-sm-6">
-                                            <label class="control-label" style="margin-bottom:10px;padding-left:0">Simultaneous Approval </label>
-                                            <select class="select form-control" multiple>
-                                                <option>Select</option>
-                                                <option>Test Lead</option>
-                                                <option>UI/UX Designer</option>
-                                                <option>Sox Analyst</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="m-t-30 row ">
-                                        <div class="col-md-12 submit-section">
-                                            <button id="leave_approval_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                                    <form>
-                                        <h4>Offer Approval Settings</h4>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-12">Default Offer Approval</label>
+
+                                    <!-- Tab Pane 2-->
+                                    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="form-group row">
+                                            <label class="control-label col-md-12">Default Leave Approval</label>
                                             <div class="col-md-12 approval-option">
                                                 <label class="radio-inline">
-                                                <input id="radio-single2" class="mr-2 default_offer_approval" value="seq-approver" name="default_offer_approval" type="radio">Sequence Approval (Chain) <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
+                                                <input id="radio-single" class="mr-2 default_offer_approval" value="seq-approver" name="default_leave_approval" type="radio">Sequence Approval (Chain) <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
                                                 </label>
                                                 <label class="radio-inline ml-2">
-                                                <input id="radio-multiple2" class="mr-2 default_offer_approval" value="sim-approver" checked="" name="default_offer_approval" type="radio">Simultaneous Approval <sup><span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
+                                                <input id="radio-multiple1" class="mr-2 default_offer_approval" value="sim-approver" checked="" name="default_leave_approval" type="radio">Simultaneous Approval <sup><span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="m-t-30">
-                                            <div class="col-md-12 submit-section">
-                                                <button id="offer_approval_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                                    <form >
-                                        <h3>Resignation Notice</h3>
                                         <div class="form-group form-row">
-                                            <label class="col-sm-12">Email Notification <span class="text-danger">*</span></label>
+                                            <label class="control-label col-sm-12">leave Approvers</label>
                                             <div class="col-sm-6">
-                                                <label class="control-label">Simultaneous Approval </label>
+                                                <label class="control-label" style="margin-bottom:10px;padding-left:0">Simultaneous Approval </label>
                                                 <select class="select form-control" multiple>
                                                     <option>Select</option>
                                                     <option>Test Lead</option>
@@ -558,19 +539,65 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group form-row">
-                                            <label class="col-md-12">Notice Days <span class="text-danger">*</span></label>
-                                            <div class="col-md-6 approval-option">
-                                                <input type="number" name="notice_days" class="form-control notice_days" value="15">
-                                            </div>
-                                        </div>
-                                        <div class="m-t-30">
+                                        <div class="m-t-30 row ">
                                             <div class="col-md-12 submit-section">
-                                                <button id="resignation_notice_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                                <button id="leave_approval_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                    <!-- Tab Pane 3-->
+                                    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                        <form>
+                                            <h4>Offer Approval Settings</h4>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-12">Default Offer Approval</label>
+                                                <div class="col-md-12 approval-option">
+                                                    <label class="radio-inline">
+                                                    <input id="radio-single2" class="mr-2 default_offer_approval" value="seq-approver" name="default_offer_approval" type="radio">Sequence Approval (Chain) <sup> <span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
+                                                    </label>
+                                                    <label class="radio-inline ml-2">
+                                                    <input id="radio-multiple2" class="mr-2 default_offer_approval" value="sim-approver" checked="" name="default_offer_approval" type="radio">Simultaneous Approval <sup><span class="badge info-badge"><i class="fa fa-info" aria-hidden="true"></i></span></sup>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-30">
+                                                <div class="col-md-12 submit-section">
+                                                    <button id="offer_approval_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Tab Pane 4-->
+                                    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                        <form >
+                                            <h3>Resignation Notice</h3>
+                                            <div class="form-group form-row">
+                                                <label class="col-sm-12">Email Notification <span class="text-danger">*</span></label>
+                                                <div class="col-sm-6">
+                                                    <label class="control-label">Simultaneous Approval </label>
+                                                    <select class="select form-control" multiple>
+                                                        <option>Select</option>
+                                                        <option>Test Lead</option>
+                                                        <option>UI/UX Designer</option>
+                                                        <option>Sox Analyst</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row">
+                                                <label class="col-md-12">Notice Days <span class="text-danger">*</span></label>
+                                                <div class="col-md-6 approval-option">
+                                                    <input type="number" name="notice_days" class="form-control notice_days" value="15">
+                                                </div>
+                                            </div>
+                                            <div class="m-t-30">
+                                                <div class="col-md-12 submit-section">
+                                                    <button id="resignation_notice_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
