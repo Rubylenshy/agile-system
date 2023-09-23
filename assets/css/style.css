@@ -1249,6 +1249,7 @@ table.dataTable thead > tr > td.sorting {
     transition: all 0.3s ease-in-out
 }
 
+
 /* Custom Radio */
 .radio-inline{
 	display: flex;
@@ -1352,11 +1353,29 @@ box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
 }
 
 .workflow{
+	color: rgba(120, 120, 120, 0.783);
+	padding: 10px 10px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	transition: .3s all;
 }
-.workflow .default{
+.workflow:hover{
+	color: rgba(26, 25, 25, 0.783);
+	background: #beaaaa30;
+	border-radius: 5px;
+}
+.default svg{
+	width: 20px !important;
+}
+.default .hide{
 	display: none;
+}
+.workflow .set-default{
+	display: none;
+}
+.workflow:hover .set-default{
+	display: flex;
 }
 
 .setting-performance-table.table>tbody>tr>td, .setting-performance-table.table>tbody>tr>th, .setting-performance-table.table>tfoot>tr>td, .setting-performance-table.table>tfoot>tr>th, .setting-performance-table.table>thead>tr>td, .setting-performance-table.table>thead>tr>th {
@@ -1679,7 +1698,6 @@ box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
 }
 .sidebar-menu ul ul a.active {
 	color: #f43b48;
-	text-decoration: underline;
 }
 .mobile-user-menu {
     color: #fff;
