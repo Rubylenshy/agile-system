@@ -229,7 +229,6 @@
 								<ul style="display: none;">
 									<li><a href="projects.html">Projects</a></li>
 									<li><a href="tasks.html">Tasks</a></li>
-									<li><a href="task-board.html">Task Board</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
@@ -286,13 +285,16 @@
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Workflow</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Security</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Automation</a>
+                                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Connections</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Blueprints</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="groups-tab" data-toggle="tab" href="#groups" role="tab" aria-controls="settings" aria-selected="false">Groups</a>
                                 </li>
                             </ul>
 
@@ -446,6 +448,35 @@
                                     <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                                         <form >
                                             <h3>Resignation Notice</h3>
+                                            <div class="form-group form-row">
+                                                <label class="col-sm-12">Email Notification <span class="text-danger">*</span></label>
+                                                <div class="col-sm-6">
+                                                    <label class="control-label">Simultaneous Approval </label>
+                                                    <select class="select form-control" multiple>
+                                                        <option>Select</option>
+                                                        <option>Test Lead</option>
+                                                        <option>UI/UX Designer</option>
+                                                        <option>Sox Analyst</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row">
+                                                <label class="col-md-12">Notice Days <span class="text-danger">*</span></label>
+                                                <div class="col-md-6 approval-option">
+                                                    <input type="number" name="notice_days" class="form-control notice_days" value="15">
+                                                </div>
+                                            </div>
+                                            <div class="m-t-30">
+                                                <div class="col-md-12 submit-section">
+                                                    <button id="resignation_notice_set_btn" type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Tab Pane 5-->
+                                    <div class="tab-pane" id="groups" role="tabpanel" aria-labelledby="groups-tab">
+                                        <form >
+                                            <h3>Groups</h3>
                                             <div class="form-group form-row">
                                                 <label class="col-sm-12">Email Notification <span class="text-danger">*</span></label>
                                                 <div class="col-sm-6">

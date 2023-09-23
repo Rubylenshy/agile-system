@@ -200,7 +200,7 @@
             </div>
 			<!-- /Header -->
 			
-			<!-- Sidebar -->
+			
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-inner slimscroll">
 					<div id="sidebar-menu" class="sidebar-menu">
@@ -211,7 +211,7 @@
 							<li class="submenu">
 								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a class="active" href="index.html">Agile Team Dashboard</a></li>
+									<li><a href="index.html">Agile Team Dashboard</a></li>
 									<li><a href="employee-dashboard.html">User Dashboard</a></li>
 								</ul>
 							</li>
@@ -233,7 +233,6 @@
 								<ul style="display: none;">
 									<li><a href="projects.html">Projects</a></li>
 									<li><a href="tasks.html">Tasks</a></li>
-									<li><a href="task-board.html">Task Board</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
@@ -291,12 +290,6 @@
 									<h4>Lead</h4>
 									<div class="avatar-group">
 										<div class="avatar">
-											<img class="avatar-img rounded-circle border border-white" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
-										</div>
-										<div class="avatar">
-											<img class="avatar-img rounded-circle border border-white" alt="User Image" src="assets/img/profiles/avatar-01.jpg">
-										</div>
-										<div class="avatar">
 											<img class="avatar-img rounded-circle border border-white" alt="User Image" src="assets/img/profiles/avatar-16.jpg">
 										</div>
 										<div class="avatar">
@@ -341,9 +334,11 @@
 						</div>
 					</div>
 					
-					<div class="kanban-board card mb-0">
+					<!-- Kanban Board -->
+					<divx class="kanban-board card mb-0">
 						<div class="card-body">
 							<div class="kanban-cont">
+								<!-- Pending Panel -->
 								<div class="kanban-list kanban-danger">
 									<div class="kanban-header">
 										<span class="status-title">Pending</span>
@@ -358,12 +353,13 @@
 										</div>
 									</div>
 									<div class="kanban-wrap">
+				
 										<div class="card panel">
 											<div class="kanban-box">
 												<div class="task-board-header">
 													<span class="status-title"><a href="task-view.html">Website redesign</a></span>
 													<div class="dropdown kanban-task-action">
-														<a href="" data-toggle="dropdown">
+														<a href="#" data-toggle="dropdown">
 															<i class="fa fa-angle-down"></i>
 														</a>
 														<div class="dropdown-menu dropdown-menu-right">
@@ -391,6 +387,7 @@
 												</div>
 											</div>
 										</div>
+
 										<div class="card panel">
 											<div class="kanban-box">
 												<div class="task-board-header">
@@ -464,6 +461,8 @@
 										<a href="javascript:void(0);" data-toggle="modal" data-target="#add_task_modal">Add New Task</a>
 									</div>
 								</div>
+
+								<!-- Progress Panel -->
 								<div class="kanban-list kanban-info">
 									<div class="kanban-header">
 										<span class="status-title">Progress</span>
@@ -550,6 +549,8 @@
 										<a href="javascript:void(0);" data-toggle="modal" data-target="#add_task_modal">Add New Task</a>
 									</div>
 								</div>
+
+								<!-- Completed Panel -->
 								<div class="kanban-list kanban-success">
 									<div class="kanban-header">
 										<span class="status-title">Completed</span>
@@ -570,9 +571,10 @@
 									</div>
 								</div>
 								
+								<!-- In Progress Panel -->
 								<div class="kanban-list kanban-warning">
 									<div class="kanban-header">
-										<span class="status-title">Inprogress</span>
+										<span class="status-title">In progress</span>
 										<div class="dropdown kanban-action">
 											<a href="" data-toggle="dropdown">
 												<i class="fa fa-ellipsis-v"></i>
