@@ -68,17 +68,13 @@
                 .append("<div class='col-md-12'><div class='form-group'><label class='control-label'>Event Name</label><input class='form-control' type='text' name='title'/></div></div>")
                 .append("<div class='col-md-12'><div class='form-group'><label class='control-label'>Category</label><select class='select form-control' name='category'></select></div></div>")
                 .find("select[name='category']")
-                .append("<option value='bg-danger'>Danger</option>")
-                .append("<option value='bg-success'>Success</option>")
-                .append("<option value='bg-purple'>Purple</option>")
-                .append("<option value='bg-primary'>Primary</option>")
-                .append("<option value='bg-pink'>Pink</option>")
-                .append("<option value='bg-info'>Info</option>")
-                .append("<option value='bg-inverse'>Inverse</option>")
-                .append("<option value='bg-orange'>Orange</option>")
-                .append("<option value='bg-brown'>Brown</option>")
-                .append("<option value='bg-teal'>Teal</option>")
-                .append("<option value='bg-warning'>Warning</option></div></div>");
+                .append("<option value='bg-danger'>Design</option>")
+                .append("<option value='bg-success'>Content Writing</option>")
+                .append("<option value='bg-purple'>Development</option>")
+                .append("<option value='bg-primary'>Testing</option>")
+                .append("<option value='bg-pink'>Web Content Analysis</option>")
+                .append("<option value='bg-info'>Research</option>")
+                .append("<option value='bg-inverse'>Feedback</option>");
             $this.$modal.find('.delete-event').hide().end().find('.save-event').show().end().find('.modal-body').empty().prepend(form).end().find('.save-event').unbind('click').click(function () {
                 form.submit();
             });
