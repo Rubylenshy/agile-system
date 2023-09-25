@@ -1973,12 +1973,16 @@ box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
 .account-page {
 	align-items: center ;
 	display: flex;
+	background: url(../img/background.jpg) no-repeat;
+	background-size: cover;
 }
 .account-page .main-wrapper {
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
 }
 .account-content {
 	padding: 20px 0;
